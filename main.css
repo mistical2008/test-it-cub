@@ -1027,35 +1027,37 @@ a.btn {
   display: flex;
   justify-content: space-between;
 }
+.directions {
+  padding-bottom: 100px;
+}
 .directions ul {
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 .cards__header {
   align-items: center;
   justify-content: space-between;
 }
-.directions__list {
-}
 .directions__item {
   --width-mobile: 12;
+  --width-tablet: 6;
   --width-desktop: 4;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
+  margin-top: 60px;
+}
+.directions__item:nth-child(1), 
+.directions__item:nth-child(2), 
+.directions__item:nth-child(3) {
+  margin-top: 0;
 }
 .directions__item a {
   font: inherit;
   text-decoration: none;
   color: inherit;
 }
-.directions__image-wrapper {
-  position: relative;
-  display: block;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  padding-bottom: 60.9375%;
-}
+/* .directions__image-wrapper {
+  @util aspect-ratio(16:9.75);
+} */
 .directions__image {
   width: 100%;
 }
@@ -1063,8 +1065,36 @@ a.btn {
   margin-top: 28px;
 }
 .direction__title {
-  margin-top: 0;
-  margin-bottom: 12px}
+  margin: 0;
+}
+.direction__description {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+@media(max-width: 991px) {
+  .directions__item:nth-child(3) {
+    margin-top: 60px;
+  }
+}
+@media(max-width: 768px) {
+  .directions__item {
+    margin-top: 30px;
+  }
+  .directions__item:nth-child(2),
+  .directions__item:nth-child(3) {
+    margin-top: 30px;
+  }
+  .directions__description {
+    margin-top: 20px;
+  }
+  .direction__title {
+    font-size: 18px;
+  }
+  .direction__description {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+}
 .for-whom {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -1551,6 +1581,36 @@ aside.events-inner__links .item__link .item__title {
 		font-size: 38px;
 	}
 	.events-page .events__list {
+		margin-top: 30px;
+	}
+}
+.directions-page .directions {
+	padding-top: 0;
+	padding-bottom: 100px;
+}
+.directions-page .directions__title {
+	padding: 60px 0;
+	background-color: #FAFBFD;
+}
+.directions-page .directions__title h2 {
+	text-align: center;
+	color: var(--global-blue-700-color);
+	margin: 0;
+}
+.directions-page .directions__list {
+	margin-top: 60px;
+}
+@media(max-width: 768px) {
+	.directions-page .directions {
+		padding-bottom: 50px;
+	}
+	.directions-page .directions__title {
+		padding: 52px 0;
+	}
+	.directions-page .directions__title h2 {
+		font-size: 38px;
+	}
+	.directions-page .directions__list {
 		margin-top: 30px;
 	}
 }

@@ -1,31 +1,3 @@
-@font-face {
-  font-family: monospace;
-  font-style: italic;
-  font-weight: 400;
-  src: local("Menlo Italic"),local(Menlo-Italic),local("Consolas Italic"),local(Consolas-Italic),local("Courier New Italic");
-
-}
-@font-face {
-  font-family: monospace;
-  font-style: italic;
-  font-weight: 700;
-  src: local("Menlo Bold Italic"),local(Menlo-BoldItalic),local(Monaco),local("Consolas Bold Italic"),local(Consolas-BoldItalic),local("Courier New Bold Italic");
-
-}
-@font-face {
-  font-family: monospace;
-  font-style: normal;
-  font-weight: 400;
-  src: local("Menlo Regular"),local(Menlo-Regular),local(Monaco),local(Consolas),local("Courier New");
-
-}
-@font-face {
-  font-family: monospace;
-  font-style: normal;
-  font-weight: 700;
-  src: local("Menlo Bold"),local(Menlo-Bold),local(Monaco),local("Consolas Bold"),local(Consolas-Bold),local("Courier New Bold");
-
-}
 :root {
   --global-blue-900-color: #06346A;
   --global-blue-800-color: #02458C;
@@ -57,6 +29,7 @@
 
   --global-text-fontSize-l: 18px;
   --global-text-fontSize-m: 16px;
+  --global-text-fontSize-s: 14px;
 
   --global-z-background: 1;
   --global-z-content: calc(var(--global-z-background) + 1);
@@ -65,6 +38,182 @@
   --global-z-popup: calc(var(--global-z-header) + 1);
 
 }
+/* @font-face { */
+/* font-family: 'mazzardh_black'; */
+/* src: url('../assets/fonts/mazzardh-black-webfont.eot'); */
+/* src: url('../assets/fonts/mazzardh-black-webfont.eot?#iefix') format('embedded-opentype'), */
+/* url('../assets/fonts/mazzardh-black-webfont.woff2') format('woff2'), */
+/* url('../assets/fonts/mazzardh-black-webfont.woff') format('woff'), */
+/* url('../assets/fonts/mazzardh-black-webfont.ttf') format('truetype'); */
+/* font-weight: normal; */
+/* font-style: normal; */
+/*  */
+/* } */
+/*  */
+/*  */
+/*  */
+/*  */
+/* @font-face { */
+/* font-family: 'mazzardh_black_italic'; */
+/* src: url('../assets/fonts/mazzardh-blackitalic-webfont.eot'); */
+/* src: url('../assets/fonts/mazzardh-blackitalic-webfont.eot?#iefix') format('embedded-opentype'), */
+/* url('../assets/fonts/mazzardh-blackitalic-webfont.woff2') format('woff2'), */
+/* url('../assets/fonts/mazzardh-blackitalic-webfont.woff') format('woff'), */
+/* url('../assets/fonts/mazzardh-blackitalic-webfont.ttf') format('truetype'); */
+/* font-weight: normal; */
+/* font-style: normal; */
+/*  */
+/* } */
+/*  */
+/*  */
+/*  */
+/*  */
+/* @font-face { */
+/* font-family: 'mazzardh_bold'; */
+/* src: url('../assets/fonts/mazzardh-bold-webfont.eot'); */
+/* src: url('../assets/fonts/mazzardh-bold-webfont.eot?#iefix') format('embedded-opentype'), */
+/* url('../assets/fonts/mazzardh-bold-webfont.woff2') format('woff2'), */
+/* url('../assets/fonts/mazzardh-bold-webfont.woff') format('woff'), */
+/* url('../assets/fonts/mazzardh-bold-webfont.ttf') format('truetype'); */
+/* font-weight: normal; */
+/* font-style: normal; */
+/*  */
+/* } */
+/*  */
+/*  */
+/*  */
+/*  */
+/* @font-face { */
+/* font-family: 'mazzardh_bold_italic'; */
+/* src: url('../assets/fonts/mazzardh-bolditalic-webfont.eot'); */
+/* src: url('../assets/fonts/mazzardh-bolditalic-webfont.eot?#iefix') format('embedded-opentype'), */
+/* url('../assets/fonts/mazzardh-bolditalic-webfont.woff2') format('woff2'), */
+/* url('../assets/fonts/mazzardh-bolditalic-webfont.woff') format('woff'), */
+/* url('../assets/fonts/mazzardh-bolditalic-webfont.ttf') format('truetype'); */
+/* font-weight: normal; */
+/* font-style: normal; */
+/*  */
+/* } */
+/*  */
+/*  */
+/*  */
+/*  */
+/* @font-face { */
+/* font-family: 'mazzardh_extrabold'; */
+/* src: url('../assets/fonts/mazzardh-extrabold-webfont.eot'); */
+/* src: url('../assets/fonts/mazzardh-extrabold-webfont.eot?#iefix') format('embedded-opentype'), */
+/* url('../assets/fonts/mazzardh-extrabold-webfont.woff2') format('woff2'), */
+/* url('../assets/fonts/mazzardh-extrabold-webfont.woff') format('woff'), */
+/* url('../assets/fonts/mazzardh-extrabold-webfont.ttf') format('truetype'); */
+/* font-weight: normal; */
+/* font-style: normal; */
+/*  */
+/* } */
+/*  */
+/*  */
+/*  */
+/*  */
+/* @font-face { */
+/* font-family: 'mazzardh_extrabold_italic'; */
+/* src: url('../assets/fonts/mazzardh-extrabolditalic-webfont.eot'); */
+/* src: url('../assets/fonts/mazzardh-extrabolditalic-webfont.eot?#iefix') format('embedded-opentype'), */
+/* url('../assets/fonts/mazzardh-extrabolditalic-webfont.woff2') format('woff2'), */
+/* url('../assets/fonts/mazzardh-extrabolditalic-webfont.woff') format('woff'), */
+/* url('../assets/fonts/mazzardh-extrabolditalic-webfont.ttf') format('truetype'); */
+/* font-weight: normal; */
+/* font-style: normal; */
+/*  */
+/* } */
+/*  */
+/*  */
+/*  */
+/*  */
+/* @font-face { */
+/* font-family: 'mazzardh_extralight'; */
+/* src: url('../assets/fonts/mazzardh-extralight-webfont.eot'); */
+/* src: url('../assets/fonts/mazzardh-extralight-webfont.eot?#iefix') format('embedded-opentype'), */
+/* url('../assets/fonts/mazzardh-extralight-webfont.woff2') format('woff2'), */
+/* url('../assets/fonts/mazzardh-extralight-webfont.woff') format('woff'), */
+/* url('../assets/fonts/mazzardh-extralight-webfont.ttf') format('truetype'); */
+/* font-weight: normal; */
+/* font-style: normal; */
+/*  */
+/* } */
+/*  */
+/*  */
+/*  */
+/*  */
+/* @font-face { */
+/* font-family: 'mazzardh_extralight_italic'; */
+/* src: url('../assets/fonts/mazzardh-extralightitalic-webfont.eot'); */
+/* src: url('../assets/fonts/mazzardh-extralightitalic-webfont.eot?#iefix') format('embedded-opentype'), */
+/* url('../assets/fonts/mazzardh-extralightitalic-webfont.woff2') format('woff2'), */
+/* url('../assets/fonts/mazzardh-extralightitalic-webfont.woff') format('woff'), */
+/* url('../assets/fonts/mazzardh-extralightitalic-webfont.ttf') format('truetype'); */
+/* font-weight: normal; */
+/* font-style: normal; */
+/*  */
+/* } */
+/*  */
+/*  */
+/*  */
+/*  */
+/* @font-face { */
+/* font-family: 'mazzardh_italic'; */
+/* src: url('../assets/fonts/mazzardh-italic-webfont.eot'); */
+/* src: url('../assets/fonts/mazzardh-italic-webfont.eot?#iefix') format('embedded-opentype'), */
+/* url('../assets/fonts/mazzardh-italic-webfont.woff2') format('woff2'), */
+/* url('../assets/fonts/mazzardh-italic-webfont.woff') format('woff'), */
+/* url('../assets/fonts/mazzardh-italic-webfont.ttf') format('truetype'); */
+/* font-weight: normal; */
+/* font-style: normal; */
+/*  */
+/* } */
+/*  */
+/*  */
+/*  */
+/*  */
+/* @font-face { */
+/* font-family: 'mazzardh_light'; */
+/* src: url('../assets/fonts/mazzardh-light-webfont.eot'); */
+/* src: url('../assets/fonts/mazzardh-light-webfont.eot?#iefix') format('embedded-opentype'), */
+/* url('../assets/fonts/mazzardh-light-webfont.woff2') format('woff2'), */
+/* url('../assets/fonts/mazzardh-light-webfont.woff') format('woff'), */
+/* url('../assets/fonts/mazzardh-light-webfont.ttf') format('truetype'); */
+/* font-weight: normal; */
+/* font-style: normal; */
+/*  */
+/* } */
+/*  */
+/*  */
+/*  */
+/*  */
+/* @font-face { */
+/* font-family: 'mazzardh_light_italic'; */
+/* src: url('../assets/fonts/mazzardh-lightitalic-webfont.eot'); */
+/* src: url('../assets/fonts/mazzardh-lightitalic-webfont.eot?#iefix') format('embedded-opentype'), */
+/* url('../assets/fonts/mazzardh-lightitalic-webfont.woff2') format('woff2'), */
+/* url('../assets/fonts/mazzardh-lightitalic-webfont.woff') format('woff'), */
+/* url('../assets/fonts/mazzardh-lightitalic-webfont.ttf') format('truetype'); */
+/* font-weight: normal; */
+/* font-style: normal; */
+/*  */
+/* } */
+/*  */
+/*  */
+/*  */
+/*  */
+/* @font-face { */
+/* font-family: 'mazzardh_medium'; */
+/* src: url('../assets/fonts/mazzardh-medium-webfont.eot'); */
+/* src: url('../assets/fonts/mazzardh-medium-webfont.eot?#iefix') format('embedded-opentype'), */
+/* url('../assets/fonts/mazzardh-medium-webfont.woff2') format('woff2'), */
+/* url('../assets/fonts/mazzardh-medium-webfont.woff') format('woff'), */
+/* url('../assets/fonts/mazzardh-medium-webfont.ttf') format('truetype'); */
+/* font-weight: normal; */
+/* font-style: normal; */
+/*  */
+/* } */
 .title-xl {
   font-size: var(--global-heading-fontSize);
 }
@@ -99,10 +248,12 @@
   font-weight: 400;
   font-size: var(--global-text-fontSize-m);
 }
-
+.text-s {
+  font-weight: 400;
+  font-size: var(--global-text-fontSize-s);
+}
 /* Document
  * ========================================================================== */
-
 /**
  * Add border box sizing in all browsers (opinionated).
  */
@@ -111,7 +262,6 @@
 ::after {
   box-sizing: border-box;
 }
-
 /**
  * 1. Add text decoration inheritance in all browsers (opinionated).
  * 2. Add vertical alignment inheritance in all browsers (opinionated).
@@ -121,7 +271,6 @@
   text-decoration: inherit; /* 1 */
   vertical-align: inherit; /* 2 */
 }
-
 /**
  * 1. Use the default cursor in all browsers (opinionated).
  * 2. Change the line height in all browsers (opinionated).
@@ -142,17 +291,14 @@ html {
   -webkit-text-size-adjust: 100%; /* 5 */
   word-break: break-word; /* 6 */
 }
-
 /* Sections
  * ========================================================================== */
-
 /**
  * Remove the margin in all browsers (opinionated).
  */
 body {
   margin: 0;
 }
-
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Edge, Firefox, and Safari.
@@ -161,10 +307,8 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-
 /* Grouping content
  * ========================================================================== */
-
 /**
  * Remove the margin on nested lists in Chrome, Edge, IE, and Safari.
  */
@@ -175,7 +319,6 @@ ol dl,
 ul dl {
   margin: 0;
 }
-
 /**
  * 1. Correct the inheritance of border color in Firefox.
  * 2. Add the correct box sizing in Firefox.
@@ -185,7 +328,6 @@ hr {
   color: inherit; /* 1 */
   height: 0; /* 2 */
 }
-
 /**
  * Remove the list style on navigation lists in all browsers (opinionated).
  */
@@ -194,14 +336,12 @@ nav ul {
   list-style: none;
   padding: 0;
 }
-
 /**
  * Prevent VoiceOver from ignoring list semantics in Safari (opinionated).
  */
 nav li::before {
   content: "\200B";
 }
-
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -213,10 +353,8 @@ pre {
   overflow: auto; /* 3 */
   -ms-overflow-style: scrollbar; /* 3 */
 }
-
 /* Text-level semantics
  * ========================================================================== */
-
 /**
  * Add the correct text decoration in Edge 18-, IE, and Safari.
  */
@@ -225,7 +363,6 @@ abbr[title] {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
 }
-
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
@@ -233,7 +370,6 @@ b,
 strong {
   font-weight: bolder;
 }
-
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -244,17 +380,14 @@ samp {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
-
 /**
  * Add the correct font size in all browsers.
  */
 small {
   font-size: 80%;
 }
-
 /* Embedded content
  * ========================================================================== */
-
 /*
  * Change the alignment on media elements in all browsers (opinionated).
  */
@@ -266,24 +399,20 @@ svg,
 video {
   vertical-align: middle;
 }
-
 /**
  * Remove the border on iframes in all browsers (opinionated).
  */
 iframe {
   border-style: none;
 }
-
 /**
  * Change the fill color to match the text color in all browsers (opinionated).
  */
 svg:not([fill]) {
   fill: currentColor;
 }
-
 /* Tabular data
  * ========================================================================== */
-
 /**
  * 1. Collapse border spacing in all browsers (opinionated).
  * 2. Correct table border color inheritance in all Chrome, Edge, and Safari.
@@ -294,10 +423,8 @@ table {
   border-color: inherit; /* 2 */
   text-indent: 0; /* 3 */
 }
-
 /* Forms
  * ========================================================================== */
-
 /**
  * Remove the margin on controls in Safari.
  */
@@ -306,7 +433,6 @@ input,
 select {
   margin: 0;
 }
-
 /**
  * 1. Show the overflow in IE.
  * 2. Remove the inheritance of text transform in Edge 18-, Firefox, and IE.
@@ -314,7 +440,6 @@ select {
 button {
   text-transform: none; /* 2 */
 }
-
 /**
  * Correct the inability to style buttons in iOS and Safari.
  */
@@ -324,7 +449,6 @@ button,
 [type="submit"] {
   -webkit-appearance: button;
 }
-
 /**
  * 1. Change the inconsistent appearance in all browsers (opinionated).
  * 2. Correct the padding in Firefox.
@@ -333,7 +457,6 @@ fieldset {
   border: 1px solid #a0a0a0; /* 1 */
   padding: 0.35em 0.75em 0.625em; /* 2 */
 }
-
 /**
  * 1. Add the correct display in Edge 18- and IE.
  * 2. Add the correct vertical alignment in Chrome, Edge, and Firefox.
@@ -341,14 +464,12 @@ fieldset {
 progress {
   vertical-align: baseline; /* 2 */
 }
-
 /**
  * Remove the inheritance of text transform in Firefox.
  */
 select {
   text-transform: none;
 }
-
 /**
  * 1. Remove the margin in Firefox and Safari.
  * 2. Remove the default vertical scrollbar in IE.
@@ -359,7 +480,6 @@ textarea {
   resize: vertical; /* 3 */
   resize: block; /* 3 */
 }
-
 /**
  * 1. Correct the odd appearance in Chrome, Edge, and Safari.
  * 2. Correct the outline style in Safari.
@@ -368,7 +488,6 @@ textarea {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
-
 /**
  * Correct the cursor style of increment and decrement buttons in Safari.
  */
@@ -376,7 +495,6 @@ textarea {
 ::-webkit-outer-spin-button {
   height: auto;
 }
-
 /**
  * Correct the text style of placeholders in Chrome, Edge, and Safari.
  */
@@ -384,14 +502,12 @@ textarea {
   color: inherit;
   opacity: 0.54;
 }
-
 /**
  * Remove the inner padding in Chrome, Edge, and Safari on macOS.
  */
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-
 /**
  * 1. Correct the inability to style upload buttons in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
@@ -400,7 +516,6 @@ textarea {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
-
 /**
  * Remove the inner border and padding of focus outlines in Firefox.
  */
@@ -408,31 +523,26 @@ textarea {
   border-style: none;
   padding: 0;
 }
-
 /**
  * Restore the focus outline styles unset by the previous rule in Firefox.
  */
 :-moz-focusring {
   outline: 1px dotted ButtonText;
 }
-
 /**
  * Remove the additional :invalid styles in Firefox.
  */
 :-moz-ui-invalid {
   box-shadow: none;
 }
-
 /* Interactive
  * ========================================================================== */
-
 /*
  * Add the correct display in Edge 18- and IE.
  */
 details {
   display: block;
 }
-
 /*
  * Add the correct styles in Edge 18-, IE, and Safari.
  */
@@ -456,20 +566,16 @@ dialog {
 dialog:not([open]) {
   display: none;
 }
-
 /*
  * Add the correct display in all browsers.
  */
 summary {
   display: list-item;
 }
-
 /* Scripting
  * ========================================================================== */
-
 /* User interaction
  * ========================================================================== */
-
 /*
  * Remove the tapping delay in IE 10.
  */
@@ -484,24 +590,20 @@ textarea,
 [tabindex] {
   -ms-touch-action: manipulation;
 }
-
 /* Accessibility
  * ========================================================================== */
-
 /**
  * Change the cursor on busy elements in all browsers (opinionated).
  */
 [aria-busy="true"] {
   cursor: progress;
 }
-
 /*
  * Change the cursor on control elements in all browsers (opinionated).
  */
 [aria-controls] {
   cursor: pointer;
 }
-
 /*
  * Change the cursor on disabled, not-editable, or otherwise
  * inoperable elements in all browsers (opinionated).
@@ -510,7 +612,6 @@ textarea,
 [disabled] {
   cursor: not-allowed;
 }
-
 /*
  * Change the display on visually hidden accessible elements
  * in all browsers (opinionated).
@@ -523,7 +624,7 @@ textarea,
   position: absolute;
 }
 html {
-  font-family: 'mazzardh_black', Arial, Helvetica, sans-serif;
+  font-family: 'mazzardh_medium', Arial, Helvetica, sans-serif;
   color: var(--global-dark-800-color);
 }
 .card_lifted {
@@ -535,6 +636,11 @@ html {
   min-height: 100%;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+}
+.card_lifted a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 .card_lifted:hover, .card_lifted:focus {
   box-shadow: 0px 4px 40px 10px rgba(0, 0, 0, 0.05);
@@ -580,11 +686,8 @@ html {
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
-
 /* .card_lifted { */
-
 /* transition: box-shadow 0.7s ease-in-out; */
-
 /* } */
 ._container { 
   display: flex;
@@ -622,7 +725,6 @@ html {
 .popup__content._container {
   min-width: 580px;
 }
-
 /* CSS utils */
 .visually-hidden {
   border: 0;
@@ -688,6 +790,18 @@ a.btn {
 .header__content {
   align-items: center;
 }
+.header__logo {
+  padding-left: 0px;
+}
+.header__logo {
+  --width-mobile: 12;
+  --width-desktop: 3;
+}
+.header__menu {
+  --width-mobile: 12;
+  --width-desktop: 9;
+  padding-right: 0px;
+}
 .menu__list,
 .menu__nav-wrapper {
   display: flex;
@@ -749,7 +863,8 @@ a.btn {
   --width-desktop: 3;
 }
 .footer__logo {
-  margin-bottom: 39px;
+  margin-bottom: 31px;
+  width: 236px;
 }
 .socials {
   display: flex;
@@ -801,16 +916,6 @@ a.btn {
   margin: 0;
 }
 .hero {
-}
-.header__logo {
-  padding-left: 0px;
-}
-.header__logo._col {
-  --width-mobile: 3;
-}
-.header__menu {
-  --width-mobile: 9;
-  padding-right: 0px;
 }
 .hero__content {
   --width-mobile: 6;
@@ -899,6 +1004,11 @@ a.btn {
   --width-desktop: 4;
   margin-bottom: 40px;
   padding-bottom: 20px;
+}
+.directions__item a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 .directions__image-wrapper {
   position: relative;
@@ -1061,5 +1171,204 @@ a.btn {
 .event__item-wrapper {
   --width-mobile: 12;
   --width-desktop: 4;
+}
+section.contacts {
+	background-color: var(--global-color-white-900);
+	position: relative;
+}
+section.contacts .contacts__title {
+	margin: 0 auto;
+	text-align: center;
+	padding: 60px 0;
+	color: var(--global-blue-700-color);
+}
+section.contacts .contacts__map {
+	position: relative;
+}
+section.contacts .contacts__map iframe {
+	width: 100%;
+}
+section.contacts .contacts__info {
+	position: absolute;
+	z-index: 50;
+	left: 0;
+	top: calc(50% - 50px);
+	padding: 30px;
+	background-color: var(--global-color-white-900);
+	box-shadow: 0px 4px 40px 10px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+}
+section.contacts .contacts__info .info__item {
+	margin-top: 15px;
+}
+section.contacts .contacts__info .info__item:first-child {
+	margin-top: 0;
+}
+section.contacts .info__item h3 {
+	margin: 0;
+	color: var(--global-grey-900-color);
+}
+section.contacts .info__item a {
+	margin-top: 8px;
+	display: block;
+	color: var(--global-dark-800-color);
+	text-decoration: none;
+}
+section.contacts .info__item address {
+	margin-top: 8px;
+	font-style: normal;
+	color: var(--global-dark-800-color);
+}
+.events-inner__wrapper {
+	margin-top: 30px;
+	align-items: flex-start;
+	position: relative;
+}
+section.events-inner__info {
+	--width-mobile: 8;
+}
+section.events-inner__info .info__image {
+	background-color: #FAFBFD;
+	min-height: 346px;
+	max-height: 346px;
+}
+section.events-inner__info .info__image img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	display: block;
+}
+section.events-inner__info .info__date {
+	display: block;
+	margin-top: 40px;
+	color: var(--global-grey-900-color);
+}
+section.events-inner__info .info__title {
+	margin-top: 20px;
+	margin-bottom: 0;
+	color: var(--global-dark-800-color);
+}
+section.events-inner__info .info__text {
+	margin-top: 50px;
+}
+section.events-inner__info .info__text .text__description {
+	margin-top: 10px;
+	margin-bottom: 0;
+	color: var(--global-dark-800-color);
+}
+section.events-inner__info .info__text .text__description:first-child {
+	margin-top: 0;
+}
+section.events-inner__info .info__description {
+	margin-top: 60px;
+	margin-bottom: 0;
+	color: var(--global-dark-800-color);
+}
+section.events-inner__info .info__list {
+	margin-top: 20px;
+	margin-bottom: 0;
+	padding: 0;
+	list-style-type: none;
+}
+section.events-inner__info .list__item {
+	margin-top: 20px;
+	padding: 25px 30px 30px;
+	border-radius: 8px;
+	background-color: #FAFBFD;
+}
+section.events-inner__info .item__quote {
+	position: relative;
+	margin: 0;
+}
+section.events-inner__info .item__quote .quote__icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+section.events-inner__info .item__quote .quote__description {
+	margin-left: 40px;
+	display: block;
+	color: var(--global-dark-800-color);
+	font-style: italic;
+}
+section.events-inner__info .item__quote .quote__author {
+	margin-left: 40px;
+	margin-top: 20px;
+	color: var(--global-dark-800-color);
+	font-style: normal;
+	font-weight: 600;
+	display: block;
+}
+section.events-inner__info .info__gallery {
+	margin-top: 60px;
+}
+section.events-inner__info .gallery__list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	list-style-type: none;
+}
+section.events-inner__info .gallery__item {
+	flex-basis: 31.6%;
+}
+section.events-inner__info .gallery__item:nth-child(4),
+section.events-inner__info .gallery__item:nth-child(5) {
+	flex-basis: 48.7%;
+	margin-top: 2%;
+}
+section.events-inner__info .gallery__image {
+	display: block;
+	width: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+section.events-inner__info .list__item:first-child {
+	margin-top: 0;
+}
+aside.events-inner__links {
+	--width-mobile: 4;
+	max-width: 353px;
+	margin-left: 30px;
+	padding: 24px;
+	border: 1px solid var(--global-blue-300-color);
+	box-sizing: border-box;
+	border-radius: 8px;
+	position: sticky;
+	top: 30px;
+	right: 0;
+}
+aside.events-inner__links .links__title {
+	color: var(--global-dark-800-color);
+	margin: 0;
+}
+aside.events-inner__links .links__list {
+	color: var(--global-dark-800-color);
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+aside.events-inner__links .links__item {
+	margin-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid var(--global-blue-300-color);
+}
+aside.events-inner__links .links__item:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+aside.events-inner__links .links__item .item__link {
+	display: block;
+	text-decoration: none;
+}
+aside.events-inner__links .item__link .item__date {
+	color: var(--global-grey-900-color);
+}
+aside.events-inner__links .item__link .item__title {
+	color: var(--global-dark-800-color);
+	margin-top: 8px;
+	margin-bottom: 0;
 }
 

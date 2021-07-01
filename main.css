@@ -644,7 +644,6 @@ html {
 }
 .card_lifted:hover, .card_lifted:focus {
   box-shadow: 0px 4px 40px 10px rgba(0, 0, 0, 0.05);
-  transform: scale(1.02);
   /* border: none; */
   /* transition: all 0.3s ease-in-out; */
 }
@@ -662,6 +661,10 @@ html {
   padding: 0;
   overflow: hidden;
   padding-bottom: 66.25%}
+.card__image-wrapper img {
+  display: block;
+  width: 100%;
+}
 .card__description {
   padding-top: 25px;
   padding-right: 30px;
@@ -689,6 +692,20 @@ html {
 /* .card_lifted { */
 /* transition: box-shadow 0.7s ease-in-out; */
 /* } */
+@media(max-width: 768px) {
+  .card__description {
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    padding-left: 15px}
+  .card__caption {
+    font-size: 14px;
+    padding-top: 0px;
+    padding-bottom: 10px}
+  .card__title {
+    font-size: 16px;
+  }
+}
 ._container { 
   display: flex;
   flex-wrap: wrap;
@@ -711,13 +728,13 @@ html {
   padding-right: var(--global-grid-gutter);
   padding-left: var(--global-grid-gutter);
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   ._col {
     --width-tablet: var(--width-mobile);
     --width: var(--width-tablet);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   ._col {
     --width-desktop: var(--width-tablet);
     --width: var(--width-desktop);
@@ -1191,7 +1208,26 @@ a.btn {
 }
 .event__item-wrapper {
   --width-mobile: 12;
+  --width-tablet: 6;
   --width-desktop: 4;
+  margin-top: 60px;
+}
+.event__item-wrapper:nth-child(1),
+.event__item-wrapper:nth-child(2),
+.event__item-wrapper:nth-child(3) {
+  margin-top: 0;
+}
+@media(max-width: 991px) {
+  .event__item-wrapper:nth-child(3) {
+    margin-top: 60px;
+  }
+}
+@media(max-width: 768px) {
+  .event__item-wrapper,
+  .event__item-wrapper:nth-child(2),
+  .event__item-wrapper:nth-child(3) {
+    margin-top: 25px;
+  }
 }
 section.contacts {
 	background-color: var(--global-color-white-900);
@@ -1489,4 +1525,32 @@ aside.events-inner__links .item__link .item__title {
 		margin-top: 20px;
 	}
 }
-
+.events-page .events {
+	padding-top: 0;
+}
+.events-page .events__title {
+	padding: 60px;
+	background-color: #FAFBFD;
+}
+.events-page .events__title h2 {
+	text-align: center;
+	color: var(--global-blue-700-color);
+	margin: 0;
+}
+.events-page .events__list {
+	margin-top: 60px;
+}
+@media(max-width: 768px) {
+	.events-page .events {
+		padding-bottom: 50px;
+	}
+	.events-page .events__title {
+		padding: 52px;
+	}
+	.events-page .events__title h2 {
+		font-size: 38px;
+	}
+	.events-page .events__list {
+		margin-top: 30px;
+	}
+}

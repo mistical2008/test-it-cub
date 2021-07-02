@@ -16,17 +16,18 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/index.css */ \"./src/css/index.css\");\n/* harmony import */ var _js_popup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/popup.js */ \"./src/js/popup.js\");\n/* harmony import */ var _js_popup_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_popup_js__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconsole.log(\"index.js\");\n\n\n//# sourceURL=webpack://IT-cub-markup/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/index.css */ \"./src/css/index.css\");\n/* harmony import */ var _js_handlers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/handlers */ \"./src/js/handlers.js\");\n\n\n\nconsole.log(\"index.js\");\nconst menuBtnSelector = \".js-nav-menu-icon\";\nconst menuWrapperSelector = \".menu__nav-wrapper\";\nconst activeClassName = \"_active\";\nconst $menuBtn = document.querySelector(menuBtnSelector);\n$menuBtn.addEventListener(\"click\", () => {\n  (0,_js_handlers_js__WEBPACK_IMPORTED_MODULE_1__.toggleActive)(menuWrapperSelector, activeClassName);\n  (0,_js_handlers_js__WEBPACK_IMPORTED_MODULE_1__.toggleActive)(menuBtnSelector, activeClassName);\n});\n\n\n//# sourceURL=webpack://IT-cub-markup/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/js/popup.js":
-/*!*************************!*\
-  !*** ./src/js/popup.js ***!
-  \*************************/
-/***/ (function() {
+/***/ "./src/js/handlers.js":
+/*!****************************!*\
+  !*** ./src/js/handlers.js ***!
+  \****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("console.log(\"Hello from popup.js\");\n\n\n//# sourceURL=webpack://IT-cub-markup/./src/js/popup.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"toggleActive\": function() { return /* binding */ toggleActive; }\n/* harmony export */ });\nfunction toggleActive(selector, toggleClass) {\n  const el = document.querySelector(selector);\n  if (!el)\n    return;\n  el.classList.toggle(toggleClass);\n}\n\n\n\n//# sourceURL=webpack://IT-cub-markup/./src/js/handlers.js?");
 
 /***/ }),
 
@@ -59,7 +60,7 @@ eval("\n\n/* eslint-disable */\nfunction normalizeUrl(pathComponents) {\n  retur
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      // 1625160581827\n      var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  \n\n//# sourceURL=webpack://IT-cub-markup/./src/css/index.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      // 1625230154570\n      var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  \n\n//# sourceURL=webpack://IT-cub-markup/./src/css/index.css?");
 
 /***/ }),
 
@@ -69,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \*****************************************************/
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\n\n/**\n * @note This file exists merely as an easy reference for folks adding it to their configuration entries\n */\n\n(() => {\n  /* eslint-disable global-require */\n  const { run } = __webpack_require__(/*! ./lib/client/client */ \"./node_modules/webpack-plugin-serve/lib/client/client.js\");\n  let hash = '<unknown>';\n  let options;\n  try {\n    options = {\"compress\":null,\"headers\":null,\"historyFallback\":false,\"hmr\":true,\"host\":\"127.0.0.1\",\"liveReload\":true,\"log\":{\"level\":\"info\",\"prefix\":{\"template\":\"{{level}}\"},\"name\":\"webpack-plugin-serve\"},\"open\":true,\"port\":3000,\"progress\":true,\"ramdisk\":false,\"secure\":false,\"static\":\"./dist\",\"status\":true,\"waitForBuild\":true,\"address\":\"127.0.0.1:3000\",\"compilerName\":null,\"wpsId\":\"ddabd1d\"};\n  } catch (e) {\n    const { log } = __webpack_require__(/*! ./lib/client/log */ \"./node_modules/webpack-plugin-serve/lib/client/log.js\");\n    log.error(\n      'The entry for webpack-plugin-serve was included in your build, but it does not appear that the plugin was. Please check your configuration.'\n    );\n  }\n\n  try {\n    // eslint-disable-next-line camelcase\n    hash = __webpack_require__.h();\n  } catch (e) {} // eslint-disable-line no-empty\n\n  run(hash, options);\n})();\n\n\n//# sourceURL=webpack://IT-cub-markup/./node_modules/webpack-plugin-serve/client.js?");
+eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\n\n/**\n * @note This file exists merely as an easy reference for folks adding it to their configuration entries\n */\n\n(() => {\n  /* eslint-disable global-require */\n  const { run } = __webpack_require__(/*! ./lib/client/client */ \"./node_modules/webpack-plugin-serve/lib/client/client.js\");\n  let hash = '<unknown>';\n  let options;\n  try {\n    options = {\"compress\":null,\"headers\":null,\"historyFallback\":false,\"hmr\":true,\"host\":\"127.0.0.1\",\"liveReload\":true,\"log\":{\"level\":\"info\",\"prefix\":{\"template\":\"{{level}}\"},\"name\":\"webpack-plugin-serve\"},\"open\":true,\"port\":3000,\"progress\":true,\"ramdisk\":false,\"secure\":false,\"static\":\"./dist\",\"status\":true,\"waitForBuild\":true,\"address\":\"127.0.0.1:3000\",\"compilerName\":null,\"wpsId\":\"0f672f5\"};\n  } catch (e) {\n    const { log } = __webpack_require__(/*! ./lib/client/log */ \"./node_modules/webpack-plugin-serve/lib/client/log.js\");\n    log.error(\n      'The entry for webpack-plugin-serve was included in your build, but it does not appear that the plugin was. Please check your configuration.'\n    );\n  }\n\n  try {\n    // eslint-disable-next-line camelcase\n    hash = __webpack_require__.h();\n  } catch (e) {} // eslint-disable-line no-empty\n\n  run(hash, options);\n})();\n\n\n//# sourceURL=webpack://IT-cub-markup/./node_modules/webpack-plugin-serve/client.js?");
 
 /***/ }),
 
@@ -198,18 +199,6 @@ eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subjec
 /******/ 	__webpack_require__.i = [];
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	}();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
@@ -227,7 +216,7 @@ eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subjec
 /******/ 		// This function allow to reference all chunks
 /******/ 		__webpack_require__.hu = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "ddabd1d-" + chunkId + "-wps-hmr.js";
+/******/ 			return "0f672f5-" + chunkId + "-wps-hmr.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -242,12 +231,12 @@ eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subjec
 /******/ 	
 /******/ 	/* webpack/runtime/get update manifest filename */
 /******/ 	!function() {
-/******/ 		__webpack_require__.hmrF = function() { return "main-ddabd1d-wps-hmr.json"; };
+/******/ 		__webpack_require__.hmrF = function() { return "main-0f672f5-wps-hmr.json"; };
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "e79641786185ae6cf640"; }
+/******/ 		__webpack_require__.h = function() { return "e5e4b1596f75b8445637"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

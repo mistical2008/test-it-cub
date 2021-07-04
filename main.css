@@ -2452,23 +2452,21 @@ section.directions-inner__links .link__next .link__info {
 }
 .article-page ul li::before,
 .article-page ol li::before {
-    position: absolute;
-    height: 8px;
-    left: -18px;
+  position: absolute;
+  left: -18px;
 }
 .article-page ul li::before,
 .article-page ul li::before {
-    content: '';
-    width: 8px;
-    top: 9px;
-    background-color: var(--global-blue-700-color);
-    border-radius: 50%;
+  content: '';
+  width: 8px;
+  height: 8px;
+  top: 9px;
+  background-color: var(--global-blue-700-color);
+  border-radius: 50%;
 }
-.article-page ol li::before,
 .article-page ol li::before {
-    top: 0;
-    width: 20px;
-    color: var(--global-blue-700-color);
+  width: 20px;
+  color: var(--global-blue-700-color);
 }
 .article-page a {
   color: var(--global-blue-700-color);

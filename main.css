@@ -2494,10 +2494,16 @@ section.directions-inner__links .link__next .link__info {
 .article-page a:hover, .article-page a:focus {
   border-color: var(--global-blue-700-color);
 }
+/* TODO: Find a way to make this without border <04-07-21,05-07-21> */
+.article-page .documents__list a:hover, .article-page .documents__list a:focus {
+  border-color: transparent;
+  color: var(--global-blue-900-color);
+}
 .article-page .gallery__list,
 .article-page .info__list {
   padding-left: 0px;
 }
+.article-page .documents__list .documents__item::before,
 .article-page .gallery__list .gallery__item::before,
 .article-page .info__list .info__item::before {
   content: none;

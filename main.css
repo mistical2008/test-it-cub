@@ -575,6 +575,10 @@ body {
 /* .card_lifted { */
 /* transition: box-shadow 0.7s ease-in-out; */
 /* } */
+.events .events__btn_bottom,
+.directions .directions__btn_bottom {
+  display: none;
+}
 @media(max-width: 768px) {
   .card__description {
     padding-top: 15px;
@@ -834,6 +838,9 @@ a.btn {
   flex-grow: 1;
   /* padding-right: 0px; */
 }
+.menu__nav-wrapper {
+  margin-right: -15px;
+}
 .menu__list,
 .menu__nav-wrapper {
   display: flex;
@@ -906,7 +913,7 @@ a.btn {
 .menu__icon._active::after {
   transform: translateY(-14px) rotate(-45deg);
 }
-@media (max-width: 1116px) {
+@media (max-width: 1124px) {
   .menu__nav-wrapper {
     display: none;
     opacity: 0;
@@ -2422,7 +2429,7 @@ section.directions-inner__links .link__next .link__info {
   color: var(--global-dark-800-color);
   margin: 16px 0 0;
 }
-.article-page ul:not(.gallery__list),
+.article-page ul,
 .article-page ol {
   margin-top: 16px;
   margin-bottom: 0;
@@ -2437,25 +2444,30 @@ section.directions-inner__links .link__next .link__info {
   counter-increment: listitem;
   content: counters(listitem, '.') '.';
 }
-.article-page li:not(.gallery__item) {
+.article-page li:not(.gallery__item), 
+.article-page li:not(.info__list) {
   position: relative;
   margin-top: 12px;
   list-style-type: none;
 }
-.article-page ul li:not(.gallery__item)::before,
-.article-page ol li:not(.gallery__item)::before {
+.article-page ul li::before,
+.article-page ol li::before {
     position: absolute;
-    width: 8px;
     height: 8px;
-    top: 9px;
     left: -18px;
 }
-.article-page ul li:not(.gallery__item)::before {
+.article-page ul li::before,
+.article-page ul li::before {
     content: '';
+    width: 8px;
+    top: 9px;
     background-color: var(--global-blue-700-color);
     border-radius: 50%;
 }
-.article-page ol li:not(.gallery__item)::before {
+.article-page ol li::before,
+.article-page ol li::before {
+    top: 0;
+    width: 20px;
     color: var(--global-blue-700-color);
 }
 .article-page a {
@@ -2464,5 +2476,14 @@ section.directions-inner__links .link__next .link__info {
 }
 .article-page a:hover, .article-page a:focus {
   border-color: var(--global-blue-700-color);
+}
+.article-page .gallery__list,
+.article-page .info__list {
+  padding-left: 0px;
+}
+.article-page .gallery__list .gallery__item::before,
+.article-page .info__list .info__item::before {
+  content: none;
+  padding-left: 0;
 }
 

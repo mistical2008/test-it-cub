@@ -581,12 +581,24 @@ body {
     padding-right: 20px;
     padding-bottom: 25px;
     padding-left: 15px}
+
   .card__caption {
     font-size: 14px;
     padding-top: 0px;
     padding-bottom: 10px}
+
   .card__title {
     font-size: 16px;
+  }
+
+  .cards__header .btn {
+    display: none;
+  }
+
+  .events .events__btn_bottom,
+  .directions .directions__btn_bottom {
+    display: block;
+    margin-top: 36px;
   }
 }
 ._container { 
@@ -743,6 +755,7 @@ body {
   }
 }
 .btn {
+  display: inline-block;
   flex-shrink: 0;
   color: var(--global-color-white-900);
   font: inherit;
@@ -883,6 +896,7 @@ a.btn {
 .menu__icon::after {
   bottom: 10px;
 }
+/* TODO: check for nessesity */
 .menu__icon._active {
   height: 40px;
 }
@@ -908,6 +922,15 @@ a.btn {
     margin-top: 50px;
   }
 
+  .menu__nav-wrapper._active .menu__body,
+  .menu__nav-wrapper._active .menu__item {
+    width: 100%;
+  }
+
+  .menu__nav-wrapper._active .menu__item {
+    text-align: center;
+  }
+
   .menu__list,
   .menu__nav-wrapper {
     flex-direction: column;
@@ -930,6 +953,10 @@ a.btn {
 
 }
 @media (max-width: 425px) {
+  .header__menu {
+    padding: 0;
+  }
+
   .main-logo img {
     max-width: 80%;
   }
@@ -1475,6 +1502,9 @@ a.btn {
   .questions__item {
     min-height: 420px;
   }
+  .for-whom__cta .btn {
+    padding-right: 24px;
+    padding-left: 24px}
 }
 @media (max-width: 424px) {
   .question__wrapper {
@@ -1590,6 +1620,65 @@ section.contacts .contacts__map iframe {
 		font-size: 18px;
 	}
 }
+.events-page .events {
+	padding-top: 0;
+}
+.events-page .events__title {
+	padding: 60px;
+	background-color: #FAFBFD;
+}
+.events-page .events__title h2 {
+	text-align: center;
+	color: var(--global-blue-700-color);
+	margin: 0;
+}
+.events-page .events__list {
+	margin-top: 60px;
+}
+@media(max-width: 768px) {
+	.events-page .events {
+		padding-bottom: 50px;
+	}
+	.events-page .events__title {
+		padding: 52px;
+	}
+	.events-page .events__title h2 {
+		font-size: 38px;
+	}
+	.events-page .events__list {
+		margin-top: 30px;
+	}
+}
+.directions-page .directions {
+	padding-top: 0;
+	padding-bottom: 100px;
+}
+.directions-page .directions__title {
+	padding: 60px 0;
+	background-color: #FAFBFD;
+}
+.directions-page .directions__title h2 {
+	text-align: center;
+	color: var(--global-blue-700-color);
+	margin: 0;
+}
+.directions-page .directions__list {
+	margin-top: 60px;
+}
+@media(max-width: 768px) {
+	.directions-page .directions {
+		padding-bottom: 50px;
+	}
+	.directions-page .directions__title {
+		padding: 52px 0;
+	}
+	.directions-page .directions__title h2 {
+		font-size: 38px;
+	}
+	.directions-page .directions__list {
+		margin-top: 30px;
+	}
+}
 .events-inner__wrapper {
 	margin-top: 30px;
 	padding-bottom: 100px;
@@ -1605,6 +1694,7 @@ section.events-inner__info .info__image {
 	background-color: #FAFBFD;
 	min-height: 346px;
 	max-height: 346px;
+	overflow: hidden;
 }
 section.events-inner__info .info__image img {
 	width: 100%;
@@ -1810,65 +1900,6 @@ aside.events-inner__links .item__link .item__title {
 	section.events-inner__info .gallery__item:nth-child(5) {
 		flex-basis: 100%;
 		margin-top: 20px;
-	}
-}
-.events-page .events {
-	padding-top: 0;
-}
-.events-page .events__title {
-	padding: 60px;
-	background-color: #FAFBFD;
-}
-.events-page .events__title h2 {
-	text-align: center;
-	color: var(--global-blue-700-color);
-	margin: 0;
-}
-.events-page .events__list {
-	margin-top: 60px;
-}
-@media(max-width: 768px) {
-	.events-page .events {
-		padding-bottom: 50px;
-	}
-	.events-page .events__title {
-		padding: 52px;
-	}
-	.events-page .events__title h2 {
-		font-size: 38px;
-	}
-	.events-page .events__list {
-		margin-top: 30px;
-	}
-}
-.directions-page .directions {
-	padding-top: 0;
-	padding-bottom: 100px;
-}
-.directions-page .directions__title {
-	padding: 60px 0;
-	background-color: #FAFBFD;
-}
-.directions-page .directions__title h2 {
-	text-align: center;
-	color: var(--global-blue-700-color);
-	margin: 0;
-}
-.directions-page .directions__list {
-	margin-top: 60px;
-}
-@media(max-width: 768px) {
-	.directions-page .directions {
-		padding-bottom: 50px;
-	}
-	.directions-page .directions__title {
-		padding: 52px 0;
-	}
-	.directions-page .directions__title h2 {
-		font-size: 38px;
-	}
-	.directions-page .directions__list {
-		margin-top: 30px;
 	}
 }
 .about-page .about__title {
@@ -2105,7 +2136,7 @@ section.directions-inner__info .info__description ol {
 }
 section.directions-inner__info .info__description ol li {
 	margin-top: 12px;
-	color: var(--global-blue-700-color);
+	/* color: var(--global-blue-700-color); */
 }
 section.directions-inner__info .info__description ol li p {
 	color: var(--global-dark-800-color);
@@ -2122,10 +2153,7 @@ section.directions-inner__info .info__description ul li a:hover, section.directi
 section.directions-inner__info button {
 	display: flex;
 	margin: 60px auto 0;
-	padding-top: 15px;
-	padding-right: 49px;
-	padding-bottom: 15px;
-	padding-left: 49px;
+	/* @util padding(15px 49px); */
 }
 section.directions-inner__links {
 	background-color: #FAFBFD;
@@ -2255,10 +2283,7 @@ section.directions-inner__links .link__next .link__info {
 	}
 	section.directions-inner__info button {
 		margin: 30px auto 0;
-		padding-top: 14px;
-		padding-right: 43px;
-		padding-bottom: 14px;
-		padding-left: 43px;
+		/* @util padding(14px 43px); */
 		font-size: 14px;
 	}
 	section.directions-inner__links {
@@ -2382,5 +2407,62 @@ section.directions-inner__links .link__next .link__info {
 }
 .popup__close::before {
   transform: rotate(45deg);
+}
+.article-page h2 {
+  font-size: var(--global-heading-fontSize-m);
+  font-weight: 500;
+  color: var(--global-blue-700-color);
+}
+.article-page ul:not(.gallery__list),
+.article-page ol,
+.article-page a,
+.article-page p {
+  font-weight: 400;
+  font-size: var(--global-text-fontSize-l);
+  color: var(--global-dark-800-color);
+  margin: 16px 0 0;
+}
+.article-page ul:not(.gallery__list),
+.article-page ol {
+  margin-top: 16px;
+  margin-bottom: 0;
+  padding-left: 18px;
+  list-style: none;
+}
+.article-page ol {
+  counter-reset: listitem;
+}
+/* FIXME: solve <ol> custom bullet color <04-07-21, > */
+.article-page ol li::before {
+  counter-increment: listitem;
+  content: counters(listitem, '.') '.';
+}
+.article-page li:not(.gallery__item) {
+  position: relative;
+  margin-top: 12px;
+  list-style-type: none;
+}
+.article-page ul li:not(.gallery__item)::before,
+.article-page ol li:not(.gallery__item)::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 9px;
+    left: -18px;
+}
+.article-page ul li:not(.gallery__item)::before {
+    content: '';
+    background-color: var(--global-blue-700-color);
+    border-radius: 50%;
+}
+.article-page ol li:not(.gallery__item)::before {
+    color: var(--global-blue-700-color);
+}
+.article-page a {
+  color: var(--global-blue-700-color);
+  border-bottom: 1px solid transparent;
+}
+.article-page a:hover, .article-page a:focus {
+  border-color: var(--global-blue-700-color);
 }
 

@@ -1918,7 +1918,14 @@ aside.events-inner__links .item__link .item__title {
 }
 .about-page h2 {
 	color: var(--global-blue-700-color);
-	margin: 60px 0 0;
+	margin-top: 0;
+}
+.about-page .advantages,
+.about-page .information,
+.about-page .about,
+.about-page .documents,
+.about-page .advantages {
+	padding-top: 60px;
 }
 .about-page .description {
 	color: var(--global-dark-800-color);

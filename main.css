@@ -510,6 +510,9 @@ html {
 body {
   margin-top: 120px;
 }
+body > .wrapper {
+  position: relative;
+}
 .card_lifted {
   overflow: hidden;
   border-radius: 8px;
@@ -813,7 +816,7 @@ a.btn {
   background-color: #ffffff;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -120px;
   width: 100%;
   z-index: var(--global-z-header);
   padding-top: 27px;
@@ -2053,6 +2056,12 @@ section.directions-inner__info .info__image {
 	background-color: #FAFBFD;
 	min-height: 346px;
 	max-height: 346px;
+	position: relative;
+	display: block;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	padding-bottom: 42.40196078431372%;
 }
 section.directions-inner__info .info__image img {
 	width: 100%;
@@ -2060,6 +2069,9 @@ section.directions-inner__info .info__image img {
 	-o-object-fit: cover;
 	   object-fit: cover;
 	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 section.directions-inner__info .info__title {
 	margin-top: 40px;
@@ -2324,7 +2336,7 @@ section.directions-inner__links .link__next .link__info {
 .popup__overlay {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.05);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

@@ -513,6 +513,16 @@ body {
 body > .wrapper {
   position: relative;
 }
+/* TODO: Replace red color with some more pleasant <05-07-21,05-07-21> */
+input:invalid {
+  border: 1px red solid;
+}
+input:focus:invalid {
+  border: none;
+}
+input:valid {
+  border: 2px solid black;
+}
 .card_lifted {
   overflow: hidden;
   border-radius: 8px;
